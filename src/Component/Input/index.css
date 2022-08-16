@@ -1,0 +1,47 @@
+.todo-input{
+    text-align: center;
+    font-weight: bold;
+    border: solid black;
+    background-color: rgb(209, 243, 115);
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #ddd2d2;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    
+}
+button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background-color: #328f8a;
+    background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+    width: 100%;
+    border: solid black;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+
+::placeholder {
+    color: whitesmoke;
+  }
+ol{
+    text-align: center;
+    color: rgb(78, 21, 21);
+    font-weight: bolder;
+}
+button:hover{
+    background-color: rgb(182, 233, 88);
+    border: solid rgb(182, 233, 88);
+}
+input:hover{
+    background-color: rgb(139, 247, 51);
+    border: solid rgb(182, 233, 88);
+}
