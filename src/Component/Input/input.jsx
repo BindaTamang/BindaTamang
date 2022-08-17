@@ -9,7 +9,11 @@ const Input = ({todos, setTodos}) => {
     setTodos(todos.filter((todos) => todos !==item));
     localStorage.setItem("todos", JSON.stringify(todos));
   };
- 
+  const handleUpdate = (item) => {
+    setData(item);
+    handleDelete(item);
+  };
+  
   return (
     <>
     <input 
@@ -22,21 +26,24 @@ const Input = ({todos, setTodos}) => {
     <button onClick={() => {
       //spread operator
       setTodos([...todos, data]);
-      localStorage.setItem("todos", JSON.stringify([...todos, data]));
+      localStorage.getItem("todos", JSON.stringify([...todos, data]));
       setData("");
     } 
      }>Add</button>
-     <button>Update</button>
+     
      <ol>
       {todos.map((item, index) => {
         return <li key={index}>{item}
         <button onClick={() => {
           handleDelete(item);
-        }}>Delete</button></li>
+        }}>Delete</button>
+        <button onClick={() => {
+          handleUpdate(item);
+        }}>Update</button>
+        </li>
+        
       })}
      </ol>
-  
-
    </>
   )
 }
